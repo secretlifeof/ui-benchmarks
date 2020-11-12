@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import styled from '@emotion/styled';
-import React from 'react';
+import styled from '@emotion/styled'
+import { jsx } from '@emotion/react'
 
-const StyledDot = styled.div(p => ({
+const StyledDot = styled.div((p) => ({
   position: 'absolute',
   cursor: 'pointer',
   width: 0,
@@ -16,8 +16,8 @@ const StyledDot = styled.div(p => ({
   borderLeftWidth: `${p.size / 2}px`,
   marginLeft: `${p.x}px`,
   marginTop: `${p.y}px`,
-}));
+}))
 
 export default function Dot({ color, ...props }) {
-  return <StyledDot {...props} style={{ borderBottomColor: color }} />;
+  return <StyledDot {...props} style={{ borderBottomColor: color }} />
 }
